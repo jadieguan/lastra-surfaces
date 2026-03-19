@@ -474,6 +474,54 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
   .co-grid-2{grid-template-columns:1fr}
   .pay-methods{grid-template-columns:1fr}
 }
+
+/* ENHANCED MOBILE OPTIMIZATION */
+@media(max-width:960px){
+  /* Improved touch targets */
+  .btn-sand, .btn-ghost, .nav-cta{min-height:44px;padding:14px 24px}
+  .form-submit, .co-btn-primary, .co-btn-secondary, .cart-checkout-btn{min-height:48px}
+  
+  /* Better mobile typography */
+  body{font-size:15px}
+  h1{font-size:clamp(26px,6vw,48px)!important}
+  h2{font-size:clamp(22px,5vw,36px)!important}
+  h3{font-size:clamp(18px,4vw,28px)!important}
+  
+  /* Improved mobile navigation */
+  .mobile-menu{padding:20px}
+  .mobile-menu-link{font-size:clamp(24px,6vw,36px);padding:12px 0}
+  .hamburger{padding:12px}
+  
+  /* Better mobile forms */
+  .form-input, .co-input{font-size:16px;padding:14px 0}
+  .form-label, .co-label{font-size:9px}
+  
+  /* Improved mobile cards */
+  .thickness-card, .app-card, .feature-card{padding:32px 20px}
+  
+  /* Better mobile spacing */
+  section, .features-strip, .cta-strip{padding:60px 20px!important}
+}
+
+@media(max-width:520px){
+  /* Stack everything single-column */
+  .stat-bar{grid-template-columns:1fr!important}
+  .stat-item:nth-child(n){border-right:none!important;border-bottom:1px solid var(--border)}
+  .stat-item:last-child{border-bottom:none}
+  
+  /* Larger mobile buttons */
+  .btn-sand, .btn-ghost{font-size:11px;padding:16px 28px}
+  
+  /* Better mobile navigation */
+  nav{height:60px;padding:0 16px}
+  .nav-brand-name{font-size:16px}
+  .nav-brand-domain{font-size:6px}
+  
+  /* Mobile-first forms */
+  .contact-body{padding:40px 16px!important}
+  .form-group, .co-form-group{margin-bottom:20px}
+}
+
 </style>
 </head>
 <body>
