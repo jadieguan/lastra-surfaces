@@ -1,84 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Homepage -->
   <url>
-    <loc>https://lastrasurfaces.com/</loc>
-    <lastmod>2026-03-19</lastmod>
+    <loc>https://lastrasurfaces.com/#home</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Product Page -->
   <url>
-    <loc>https://lastrasurfaces.com/product.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://lastrasurfaces.com/#product</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- How It Works -->
   <url>
-    <loc>https://lastrasurfaces.com/how-it-works.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <loc>https://lastrasurfaces.com/#how-it-works</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- FAQ -->
   <url>
-    <loc>https://lastrasurfaces.com/faq.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <loc>https://lastrasurfaces.com/#faq</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- About -->
   <url>
-    <loc>https://lastrasurfaces.com/about.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <loc>https://lastrasurfaces.com/#about</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- Order Sample -->
   <url>
-    <loc>https://lastrasurfaces.com/order-sample.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <loc>https://lastrasurfaces.com/#contact</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
-  
-  <!-- Contact -->
   <url>
-    <loc>https://lastrasurfaces.com/contact.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <loc>https://lastrasurfaces.com/#samples</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-  
-  <!-- Privacy Policy -->
-  <url>
-    <loc>https://lastrasurfaces.com/privacy.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  
-  <!-- Terms of Service -->
-  <url>
-    <loc>https://lastrasurfaces.com/terms.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  
-  <!-- CASL Compliance -->
-  <url>
-    <loc>https://lastrasurfaces.com/casl.html</loc>
-    <lastmod>2026-03-19</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  
 </urlset>
