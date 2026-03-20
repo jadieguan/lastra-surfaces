@@ -1447,6 +1447,7 @@ function showPage(id){
   try{history.pushState({page:valid},'','/#'+valid);}catch(e){}
   updateNav(valid);
   setTimeout(initReveals,50);
+  setTimeout(updateSampleAvailability,100); // Update sample availability after page loads
   const btt=document.getElementById('back-to-top');
   if(btt)btt.classList.remove('visible');
 }
@@ -1685,6 +1686,23 @@ function removeFromCart(name){
   document.querySelectorAll('.sample-add-btn').forEach(btn=>{if(btn.dataset.name===name){btn.textContent='Add to Cart';btn.classList.remove('added');}});
   renderCart();
 }
+// Control sample availability - mark samples as sold out
+const unavailableSamples = ['5mm', '6mm', '8mm', '10mm']; // Samples that are sold out
+
+function updateSampleAvailability() {
+  document.querySelectorAll('.sample-add-btn').forEach(btn => {
+    const sampleName = btn.dataset.name;
+    if (unavailableSamples.includes(sampleName)) {
+      btn.textContent = 'SOLD OUT';
+      btn.style.opacity = '0.5';
+      btn.style.cursor = 'not-allowed';
+      btn.style.background = 'var(--pebble)';
+      btn.disabled = true;
+      btn.onclick = function(e) { e.preventDefault(); return false; };
+    }
+  });
+}
+
 function renderCart(){
   const keys=Object.keys(cart);
   document.getElementById('cart-empty').style.display=keys.length?'none':'block';
@@ -1783,6 +1801,7 @@ function checkCookieConsent(){
 document.addEventListener('DOMContentLoaded',()=>{
   buildMarquee('mq-home');
   buildMarquee('mq-product');
+  updateSampleAvailability(); // Mark sold out samples
   const hash = window.location.hash.replace('#', '') || 'home';
   const page = PAGES.includes(hash) ? hash : 'home';
   showPage(page);
