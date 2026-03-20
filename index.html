@@ -1783,7 +1783,9 @@ function checkCookieConsent(){
 document.addEventListener('DOMContentLoaded',()=>{
   buildMarquee('mq-home');
   buildMarquee('mq-product');
-  showPage('home');
+  const path = window.location.pathname.replace(/^\/|\.html$/g, '') || 'home';
+  const page = PAGES.includes(path) ? path : 'home';
+  showPage(page);
   checkCookieConsent();
   window.addEventListener('popstate',e=>{if(e.state&&e.state.page)showPage(e.state.page);});
 });
