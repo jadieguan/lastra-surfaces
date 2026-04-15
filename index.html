@@ -1201,7 +1201,7 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
   <section class="samples-hero">
     <div class="eyebrow reveal">Order a Sample</div>
     <h1 class="reveal d1">Feel the difference<br>before you <em>commit.</em></h1>
-    <p class="reveal d2">Each sample is a 4″ × 4″ piece of SUS 304 stainless steel in our sandblasted matte finish — one per thickness. Hold them, compare them, and choose with confidence.</p>
+    <p class="reveal d2">Each sample is a 2″ × 4″ piece of SUS 304 stainless steel in our sandblasted matte finish — one per thickness. Hold them, compare them, and choose with confidence.</p>
   </section>
   <div style="overflow:hidden;border-bottom:1px solid var(--border)">
     <div style="width:100%;height:480px;overflow:hidden">
@@ -1212,7 +1212,7 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
   </div>
   <section style="padding:64px 52px 0">
     <div class="eyebrow reveal">What You'll Receive</div>
-    <p style="font-size:14px;line-height:1.85;color:var(--pebble);max-width:560px;margin-top:4px;padding-bottom:48px" class="reveal d1">Samples are cut from production-grade SUS 304 and finished identically to your final countertop — sandblasted matte, square-edged. Each sample ships within 3–5 business days.</p>
+    <p style="font-size:14px;line-height:1.85;color:var(--pebble);max-width:560px;margin-top:4px;padding-bottom:48px" class="reveal d1">Samples are cut from production-grade SUS 304 and finished identically to your final countertop — sandblasted matte, square- rounded edged. Each sample ships within 3–5 business days.</p>
   </section>
   <section class="sample-cards-section">
     <div class="sample-cards-grid">
@@ -1222,7 +1222,7 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
           <div class="sample-title">5mm <em>Sample</em></div>
           <p class="sample-desc">Our most popular thickness. Solid, rigid, and cost-effective. The right starting point for most residential kitchens, laundry rooms, and bar tops.</p>
           <div class="sample-specs">
-            <div class="spec-row"><span class="spec-k">Size</span><span class="spec-v">4″ × 4″</span></div>
+            <div class="spec-row"><span class="spec-k">Size</span><span class="spec-v">2″ × 4″</span></div>
             <div class="spec-row"><span class="spec-k">Finish</span><span class="spec-v">Sandblasted Matte</span></div>
             <div class="spec-row"><span class="spec-k">Grade</span><span class="spec-v">SUS 304</span></div>
             <div class="spec-row"><span class="spec-k">Ships in</span><span class="spec-v">3–5 business days</span></div>
@@ -1237,7 +1237,7 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
           <div class="sample-title">6mm <em>Sample</em></div>
           <p class="sample-desc">A step up in mass. Popular for kitchen islands and commercial counters where visible edge thickness is part of the aesthetic.</p>
           <div class="sample-specs">
-            <div class="spec-row"><span class="spec-k">Size</span><span class="spec-v">4″ × 4″</span></div>
+            <div class="spec-row"><span class="spec-k">Size</span><span class="spec-v">2″ × 4″</span></div>
             <div class="spec-row"><span class="spec-k">Finish</span><span class="spec-v">Sandblasted Matte</span></div>
             <div class="spec-row"><span class="spec-k">Grade</span><span class="spec-v">SUS 304</span></div>
             <div class="spec-row"><span class="spec-k">Ships in</span><span class="spec-v">3–5 business days</span></div>
@@ -1252,7 +1252,7 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
           <div class="sample-title">8mm <em>Sample</em></div>
           <p class="sample-desc">Substantial and commanding. Chosen for commercial-adjacent use, outdoor kitchens, and heavy-use environments where maximum rigidity matters.</p>
           <div class="sample-specs">
-            <div class="spec-row"><span class="spec-k">Size</span><span class="spec-v">4″ × 4″</span></div>
+            <div class="spec-row"><span class="spec-k">Size</span><span class="spec-v">2″ × 4″</span></div>
             <div class="spec-row"><span class="spec-k">Finish</span><span class="spec-v">Sandblasted Matte</span></div>
             <div class="spec-row"><span class="spec-k">Grade</span><span class="spec-v">SUS 304</span></div>
             <div class="spec-row"><span class="spec-k">Ships in</span><span class="spec-v">3–5 business days</span></div>
@@ -1267,7 +1267,7 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
           <div class="sample-title">10mm <em>Sample</em></div>
           <p class="sample-desc">Our most premium offering. Genuinely heavy for its size — a true indicator of the architectural presence this thickness brings to hospitality and high-end residential projects.</p>
           <div class="sample-specs">
-            <div class="spec-row"><span class="spec-k">Size</span><span class="spec-v">4″ × 4″</span></div>
+            <div class="spec-row"><span class="spec-k">Size</span><span class="spec-v">2″ × 4″</span></div>
             <div class="spec-row"><span class="spec-k">Finish</span><span class="spec-v">Sandblasted Matte</span></div>
             <div class="spec-row"><span class="spec-k">Grade</span><span class="spec-v">SUS 304</span></div>
             <div class="spec-row"><span class="spec-k">Ships in</span><span class="spec-v">3–5 business days</span></div>
@@ -1693,7 +1693,7 @@ function updateSampleAvailability() {
   document.querySelectorAll('.sample-add-btn').forEach(btn => {
     const sampleName = btn.dataset.name;
     if (unavailableSamples.includes(sampleName)) {
-      btn.textContent = 'SOLD OUT';
+      btn.textContent = 'email inquire';
       btn.style.opacity = '0.5';
       btn.style.cursor = 'not-allowed';
       btn.style.background = 'var(--pebble)';
