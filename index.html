@@ -10,6 +10,23 @@
 
   gtag('config', 'G-GL1FPQXSQS');
 </script>
+<script>
+// Legacy hash-URL redirect. Catches old #blog-* links (shared via Reddit/email/Google
+// before migration to clean URLs) and redirects to the canonical standalone URL.
+// Runs synchronously before any other script to prevent a flash of wrong content.
+(function(){
+  var h = window.location.hash;
+  if(!h) return;
+  var map = {
+    '#blog': '/journal/',
+    '#blog-stainless-countertop-cost-guide': '/journal/stainless-countertop-cost-guide/',
+    '#blog-how-to-clean-stainless-steel-countertops': '/journal/how-to-clean-stainless-steel-countertops/'
+  };
+  if(map[h]){
+    window.location.replace(map[h]);
+  }
+})();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Custom Solid Stainless Steel Countertops | Direct Fabrication US & Canada | Lastra Surfaces</title>
@@ -36,8 +53,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Lastra Surfaces","url":"https://lastrasurfaces.com","description":"Custom solid stainless steel countertops, fabricated to your exact dimensions. Full-thickness SUS 304 — no MDF backing. Direct fabrication and shipping across the US and Canada.","email":"hello@lastrasurfaces.com","foundingDate":"2025","areaServed":[{"@type":"Country","name":"United States"},{"@type":"Country","name":"Canada"}],"contactPoint":{"@type":"ContactPoint","email":"hello@lastrasurfaces.com","contactType":"sales","areaServed":["US","CA"],"availableLanguage":"English"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Custom Solid Stainless Steel Countertop","description":"Full-thickness SUS 304 stainless steel countertop, custom fabricated to your exact dimensions. Sandblasted matte finish. Available in 5mm, 6mm, 8mm, and 10mm solid steel — no MDF, no chipboard backing. Ships across the US and Canada.","brand":{"@type":"Brand","name":"Lastra Surfaces"},"material":"SUS 304 Stainless Steel","offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":"85","highPrice":"145","availability":"https://schema.org/MadeToOrder","seller":{"@type":"Organization","name":"Lastra Surfaces"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between Lastra Surfaces and Reform Kitchen stainless steel countertops?","acceptedAnswer":{"@type":"Answer","text":"Reform Kitchen stainless steel countertops use a thin steel sheet bonded over a chipboard substrate core. Lastra Surfaces countertops are full-thickness solid SUS 304 stainless steel — starting at 5mm with no board core, no MDF, no substrate."}},{"@type":"Question","name":"How is Lastra Surfaces different from IKEA stainless steel countertops?","acceptedAnswer":{"@type":"Answer","text":"IKEA's stainless steel countertops are 0.9mm thick sheet metal in fixed standard sizes, available in-store only. Lastra fabricates to any custom dimension, ships directly to your door anywhere in the US and Canada, starting at 5mm solid steel with no substrate."}},{"@type":"Question","name":"Do you ship custom stainless steel countertops to Canada?","acceptedAnswer":{"@type":"Answer","text":"Yes. We ship to all contiguous US states and all Canadian provinces via freight carrier with full tracking and custom wooden crating."}},{"@type":"Question","name":"How much does a custom stainless steel countertop cost?","acceptedAnswer":{"@type":"Answer","text":"Lastra Surfaces custom stainless steel countertops start from $85 per square foot for 5mm, $100/sqft for 6mm, $120/sqft for 8mm, and $145/sqft for 10mm solid SUS 304."}},{"@type":"Question","name":"Can I get a stainless steel countertop without buying a full kitchen?","acceptedAnswer":{"@type":"Answer","text":"Yes. Lastra Surfaces fabricates and ships standalone stainless steel countertops to any address in the US and Canada. No full kitchen purchase, no showroom visit required."}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"How Much Does a Stainless Steel Countertop Cost? A Room-by-Room Breakdown.","description":"Small galley, L-shape, large island kitchen — what you'll actually pay at every thickness, with layout diagrams and real sqft estimates for each kitchen size.","author":{"@type":"Organization","name":"Lastra Surfaces"},"publisher":{"@type":"Organization","name":"Lastra Surfaces","url":"https://lastrasurfaces.com"},"url":"https://lastrasurfaces.com/#blog-stainless-countertop-cost-guide","datePublished":"2025-04-01","dateModified":"2025-04-01","mainEntityOfPage":{"@type":"WebPage","@id":"https://lastrasurfaces.com/#blog-stainless-countertop-cost-guide"},"keywords":["stainless steel countertop cost","stainless steel countertop price per square foot","custom stainless countertop cost","how much does a stainless countertop cost","SUS 304 countertop price"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Clean Stainless Steel Countertops: The Only 3 Things You Actually Need.","description":"Most products marketed for stainless steel are unnecessary. Here's the three-item cleaning routine professional kitchens have used for a century — and what to leave on the shelf.","author":{"@type":"Organization","name":"Lastra Surfaces"},"publisher":{"@type":"Organization","name":"Lastra Surfaces","url":"https://lastrasurfaces.com"},"url":"https://lastrasurfaces.com/#blog-how-to-clean-stainless-steel-countertops","datePublished":"2026-04-16","dateModified":"2026-04-16","mainEntityOfPage":{"@type":"WebPage","@id":"https://lastrasurfaces.com/#blog-how-to-clean-stainless-steel-countertops"},"keywords":["how to clean stainless steel countertops","best cleaner for stainless steel countertop","stainless steel countertop care","remove water spots stainless steel","stainless steel countertop maintenance"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"How Much Does a Stainless Steel Countertop Cost? A Room-by-Room Breakdown.","description":"Small galley, L-shape, large island kitchen — what you'll actually pay at every thickness, with layout diagrams and real sqft estimates for each kitchen size.","author":{"@type":"Organization","name":"Lastra Surfaces"},"publisher":{"@type":"Organization","name":"Lastra Surfaces","url":"https://lastrasurfaces.com"},"url":"https://lastrasurfaces.com/journal/stainless-countertop-cost-guide/","datePublished":"2025-04-01","dateModified":"2025-04-01","mainEntityOfPage":{"@type":"WebPage","@id":"https://lastrasurfaces.com/journal/stainless-countertop-cost-guide/"},"keywords":["stainless steel countertop cost","stainless steel countertop price per square foot","custom stainless countertop cost","how much does a stainless countertop cost","SUS 304 countertop price"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Clean Stainless Steel Countertops: The Only 3 Things You Actually Need.","description":"Most products marketed for stainless steel are unnecessary. Here's the three-item cleaning routine professional kitchens have used for a century — and what to leave on the shelf.","author":{"@type":"Organization","name":"Lastra Surfaces"},"publisher":{"@type":"Organization","name":"Lastra Surfaces","url":"https://lastrasurfaces.com"},"url":"https://lastrasurfaces.com/journal/how-to-clean-stainless-steel-countertops/","datePublished":"2026-04-16","dateModified":"2026-04-16","mainEntityOfPage":{"@type":"WebPage","@id":"https://lastrasurfaces.com/journal/how-to-clean-stainless-steel-countertops/"},"keywords":["how to clean stainless steel countertops","best cleaner for stainless steel countertop","stainless steel countertop care","remove water spots stainless steel","stainless steel countertop maintenance"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Plus+Jakarta+Sans:wght@200;300;400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -1394,7 +1411,7 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
     </div>
   </div>
   <section style="padding:72px 52px;max-width:1100px;margin:0 auto">
-    <article class="blog-card reveal" onclick="showPage('blog-how-to-clean-stainless-steel-countertops')" style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;padding-bottom:56px;border-bottom:1px solid var(--border);cursor:pointer;margin-bottom:56px">
+    <article class="blog-card reveal" onclick="window.location.href='/journal/how-to-clean-stainless-steel-countertops/'" style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;padding-bottom:56px;border-bottom:1px solid var(--border);cursor:pointer;margin-bottom:56px">
       <div style="background:var(--cream);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
         <div style="position:absolute;inset:0;background:linear-gradient(135deg,#EDE4D3 0%,#C4A882 60%,#7A5E35 100%);opacity:.95"></div>
         <div style="position:relative;z-index:1;text-align:center;padding:32px">
@@ -1412,7 +1429,7 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
         </div>
       </div>
     </article>
-    <article class="blog-card reveal" onclick="showPage('blog-stainless-countertop-cost-guide')" style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;padding-bottom:56px;border-bottom:1px solid var(--border);cursor:pointer;margin-bottom:56px">
+    <article class="blog-card reveal" onclick="window.location.href='/journal/stainless-countertop-cost-guide/'" style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;padding-bottom:56px;border-bottom:1px solid var(--border);cursor:pointer;margin-bottom:56px">
       <div style="background:var(--cream);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
         <div style="position:absolute;inset:0;background:linear-gradient(135deg,#2C2A27 0%,#4A4540 40%,#C4A882 100%);opacity:.9"></div>
         <div style="position:relative;z-index:1;text-align:center;padding:32px">
@@ -1796,9 +1813,9 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
 
     <div class="reveal blog-body" style="font-size:15px;line-height:1.95;color:var(--charcoal);font-weight:300">
 
-      <p style="margin-bottom:28px">Walk down the cleaning aisle of any hardware store and you'll find a dozen products branded for stainless steel. Sprays. Wipes. Polishes. Mystery oils in aerosol cans. Each one promises to restore shine, eliminate streaks, or protect against fingerprints...</p>
+      <p style="margin-bottom:28px">Walk down the cleaning aisle of any hardware store and you'll find a dozen products specifically branded for stainless steel. Sprays. Wipes. Polishes. Mystery oils in aerosol cans. Each one promises to restore shine, eliminate streaks, or protect against fingerprints.</p>
       <p style="margin-bottom:28px">Almost none of them are necessary.</p>
-      <p style="margin-bottom:48px">Stainless steel is one of the easiest surfaces to maintain in a kitchen, <em style="color:var(--charcoal);font-style:italic">if</em>  you know what actually cleans it and what just moves grime around. Professional kitchens that have used it for a decades don't stock a cupboard full of specialty products. You shouldn't have to either.</p>
+      <p style="margin-bottom:48px">Stainless steel is one of the easiest surfaces to maintain in a kitchen, <em style="color:var(--charcoal);font-style:italic">if</em> you know what actually cleans it and what just moves grime around. The professional kitchens that have used it for a century don't stock a cupboard full of specialty products. They use three things, and so should you.</p>
 
       <h2 style="font-family:'Playfair Display',serif;font-weight:300;font-size:clamp(22px,2.8vw,32px);color:var(--charcoal);margin-bottom:8px;margin-top:0">The three things</h2>
       <div style="width:32px;height:1px;background:var(--sand);margin-bottom:28px"></div>
@@ -1812,7 +1829,7 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
         </ul>
       </div>
 
-      <p style="margin-bottom:48px">That's it. No polish. No stainless-specific spray. No mystery aerosols. With those three items, you have everything you need to keep a stainless steel countertop looking the way it did the day it arrived. More importantly, the way it will ten+ years from now.</p>
+      <p style="margin-bottom:48px">That's it. No polish. No stainless-specific spray. No mystery aerosols. With those three items, you have everything you need to keep a stainless steel countertop looking the way it did the day it arrived. More importantly, the way it will five years from now.</p>
 
       <h2 style="font-family:'Playfair Display',serif;font-weight:300;font-size:clamp(22px,2.8vw,32px);color:var(--charcoal);margin-bottom:8px;margin-top:0">Your daily routine <em>(30 seconds)</em></h2>
       <div style="width:32px;height:1px;background:var(--sand);margin-bottom:28px"></div>
@@ -2007,7 +2024,7 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
 
       <p style="margin-bottom:28px">You will, eventually, scratch it. A ring. A dropped knife. A pot dragged too far. This is normal. A real stainless steel counter isn't a museum piece.</p>
       <p style="margin-bottom:28px">For small scratches on a sandblasted finish like Lastra's, a grey Scotch-Brite pad (the non-scouring kind, labelled "light duty") rubbed gently in small circular motions will blend them into the surrounding surface within a minute or two. The scratch doesn't disappear. It becomes part of the overall patina. This is how stainless steel is supposed to wear.</p>
-
+      <p style="margin-bottom:48px">For deeper gouges, a finishing professional can re-sand the surface. But in most kitchens, the counter simply develops a soft, unified matte sheen over the first year of use, and individual marks stop being visible altogether.</p>
 
       <h2 style="font-family:'Playfair Display',serif;font-weight:300;font-size:clamp(22px,2.8vw,32px);color:var(--charcoal);margin-bottom:8px;margin-top:0">The underlying idea</h2>
       <div style="width:32px;height:1px;background:var(--sand);margin-bottom:28px"></div>
