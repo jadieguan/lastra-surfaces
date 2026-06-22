@@ -2342,16 +2342,18 @@ async function handleSubmit(e){
       }
     }
 
-    // Step 2: Build form data and append file links as a text field
+    // Step 2: Build JSON payload from form fields
     submitBtn.textContent='Sending…';
-    const data=new FormData(form);
-    data.delete('attachment'); // remove raw files — we use links instead
-    data.append('attachments', fileLinks.length ? fileLinks.join('\n') : 'None');
+    const raw=new FormData(form);
+    const payload={};
+    raw.forEach((v,k)=>{if(k!=='attachment')payload[k]=v;});
+    payload.attachments=fileLinks.length?fileLinks.join('\n'):'None';
 
-    // Step 3: POST to Google Apps Script
+    // Step 3: POST to Google Apps Script as JSON (avoids CORS preflight issues with FormData)
     const res=await fetch('https://script.google.com/macros/s/AKfycbz6YgG84ADX3dYoRwql6EJgz3exsp7Qq3b_2XSPNqPvrenLti3kAsud1RsHkzgG74vC2A/exec',{
       method:'POST',
-      body:data
+      headers:{'Content-Type':'text/plain'},
+      body:JSON.stringify(payload)
     });
     const json=await res.json().catch(()=>({}));
     if(json.result==='success'){
