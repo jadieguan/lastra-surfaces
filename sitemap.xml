@@ -51,21 +51,49 @@
   </url>
 
   <url>
-    <loc>https://lastrasurfaces.com/#blog</loc>
-    <lastmod>2026-04-16</lastmod>
+    <loc>https://lastrasurfaces.com/journal/</loc>
+    <lastmod>2026-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://lastrasurfaces.com/#blog-stainless-countertop-cost-guide</loc>
+    <loc>https://lastrasurfaces.com/journal/choosing-stainless-steel-countertop-thickness/</loc>
+    <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lastrasurfaces.com/journal/are-stainless-steel-countertops-durable/</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lastrasurfaces.com/journal/stainless-steel-countertops-for-outdoor-kitchens/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lastrasurfaces.com/journal/how-custom-stainless-steel-countertops-are-made/</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://lastrasurfaces.com/journal/stainless-countertop-cost-guide/</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://lastrasurfaces.com/#blog-how-to-clean-stainless-steel-countertops</loc>
+    <loc>https://lastrasurfaces.com/journal/how-to-clean-stainless-steel-countertops/</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
