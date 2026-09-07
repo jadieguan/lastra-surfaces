@@ -2430,7 +2430,7 @@ async function handleSubmit(e){
     payload.attachments=fileLinks.length?fileLinks.join('\n'):'None';
 
     // Step 3: POST to Google Apps Script as JSON (avoids CORS preflight issues with FormData)
-    const res=await fetch('https://script.google.com/macros/s/AKfycbz6YgG84ADX3dYoRwql6EJgz3exsp7Qq3b_2XSPNqPvrenLti3kAsud1RsHkzgG74vC2A/exec',{
+    const res=await fetch('https://script.google.com/macros/s/AKfycbwS-Jr8QSEUUwu8OqFgctLXhqDLR-cGu7CNIVcVcsFJNs9rfHRg7I9k-7LKL-M0E1VFnA/exec',{
       method:'POST',
       headers:{'Content-Type':'text/plain'},
       body:JSON.stringify(payload)
