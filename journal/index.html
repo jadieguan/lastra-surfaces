@@ -492,6 +492,7 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
 .standalone-main{padding-top:66px}
 .blog-card{transition:opacity .2s;text-decoration:none;color:inherit}
 .blog-card:hover{opacity:.85}
+@media(max-width:720px){.journal-list{padding:48px 20px!important}.blog-card{grid-template-columns:1fr!important;gap:24px!important;padding-bottom:40px!important;margin-bottom:40px!important}}
 </style>
 </head>
 <body>
@@ -523,7 +524,7 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
       <h1 style="font-family:'Playfair Display',serif;font-weight:300;font-size:clamp(28px,4vw,52px);color:var(--white);line-height:1.1">Material knowledge.<br><em>Straight from the source.</em></h1>
     </div>
   </div>
-  <section style="padding:72px 52px;max-width:1100px;margin:0 auto">
+  <section class="journal-list" style="padding:72px 52px;max-width:1100px;margin:0 auto">
 
     <a href="/journal/choosing-stainless-steel-countertop-thickness/" class="blog-card reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;padding-bottom:56px;border-bottom:1px solid var(--border);margin-bottom:56px">
       <div style="background:var(--cream);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden">
