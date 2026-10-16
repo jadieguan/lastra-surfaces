@@ -12,7 +12,7 @@
   - 8mm: from $120/sqft. Commercial-adjacent and outdoor installations.
   - 10mm: from $145/sqft. Premium residential and hospitality projects.
 - Sizes: any custom dimension, including L-shapes and multi-piece projects.
-- Edges: square edge eased by hand to R0.8 mm (the only edge profile offered). Corners R6.35 mm [1/4"] standard, custom radius on request.
+- Edges: square edge eased by hand to R0.8 mm (the only edge profile offered). Corners R9 mm (about 3/8", a "dime radius") standard, custom radius on request.
 - L-shapes: one piece or in sections depending on overall size; sections are butted tight together at a seam.
 - Add-ons: integrated welded sinks (seamless, no rim or caulk joint), faucet holes, sink and appliance cut-outs.
 - Splashes: backsplashes and sidesplashes, coved one piece or stacked (glued or welded); height specified by the client.
