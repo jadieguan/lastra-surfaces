@@ -12,7 +12,10 @@
   - 8mm: from $120/sqft. Commercial-adjacent and outdoor installations.
   - 10mm: from $145/sqft. Premium residential and hospitality projects.
 - Sizes: any custom dimension, including L-shapes and multi-piece projects.
-- Add-ons: integrated welded sinks (seamless, no rim or caulk joint), faucet holes, backsplashes, sink and appliance cut-outs.
+- Edges: square edge eased by hand to R0.8 mm (the only edge profile offered). Corners R6.35 mm [1/4"] standard, custom radius on request.
+- L-shapes: one piece or in sections depending on overall size; sections are butted tight together at a seam.
+- Add-ons: integrated welded sinks (seamless, no rim or caulk joint), faucet holes, sink and appliance cut-outs.
+- Splashes: backsplashes and sidesplashes, coved one piece or stacked (glued or welded); height specified by the client.
 - Lead time: 7–8 weeks from deposit to delivery (6 weeks fabrication plus 1–2 weeks freight). Rush orders are not currently available.
 - Quotes: line-itemised quote within 3–4 business days of submitting measurements. No account or commitment required.
 - Delivery: custom wooden freight crate, curbside delivery with tracking, to all contiguous US states and all Canadian provinces.
@@ -26,6 +29,7 @@
 - [Product](https://lastrasurfaces.com/product/): thicknesses, pricing, finish and add-ons
 - [How it works](https://lastrasurfaces.com/how-it-works/): measuring, quoting, fabrication and delivery timeline
 - [FAQ](https://lastrasurfaces.com/faq/): ordering, materials, delivery and care questions
+- [For designers](https://lastrasurfaces.com/for-designers/): free spec sheet and CAD details (PDF and DXF): thickness sections, edges and corners, backsplash and sidesplash
 - [Order samples](https://lastrasurfaces.com/samples/)
 - [Get a quote](https://lastrasurfaces.com/contact/)
 - [About](https://lastrasurfaces.com/about/)
