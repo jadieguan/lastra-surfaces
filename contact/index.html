@@ -660,6 +660,11 @@ footer{background:var(--obsidian);padding:72px 52px 40px}
       <form id="quote-form" onsubmit="handleSubmit(event)" novalidate>
         <div class="form-group"><label class="form-label">Full Name *</label><input class="form-input" type="text" name="name" placeholder="Your name" required></div>
         <div class="form-group"><label class="form-label">Email Address *</label><input class="form-input" type="email" name="email" placeholder="you@example.com" required></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+          <div class="form-group"><label class="form-label">City *</label><input class="form-input" type="text" name="city" placeholder="e.g. Brooklyn" autocomplete="address-level2" required></div>
+          <div class="form-group"><label class="form-label">State / Province *</label><input class="form-input" type="text" name="state" placeholder="e.g. NY or ON" autocomplete="address-level1" required></div>
+        </div>
+        <p style="font-family:'DM Mono',monospace;font-size:7px;letter-spacing:.18em;color:var(--pebble);margin:-12px 0 20px;line-height:1.7">For your shipping estimate. Freight is quoted separately from your counters.</p>
         <div class="form-group"><label class="form-label">Project Type *</label><select class="form-input" name="project_type" required><option value="">Select…</option><option>Residential</option><option>Commercial</option><option>Hospitality</option><option>Other</option></select></div>
         <div class="form-group"><label class="form-label">Surface Type *</label><select class="form-input" name="surface_type" required><option value="">Select…</option><option>Countertop</option><option>Island</option><option>Laundry Room</option><option>Outdoor</option><option>Bar Top</option><option>Restaurant Prep Surface</option><option>Café Counter</option><option>Other</option></select></div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
