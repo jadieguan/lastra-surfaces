@@ -929,6 +929,8 @@ function renderFileList(){
 }
 
 // QUOTE FORM SUBMIT
+const CRM_ENDPOINT='https://script.google.com/macros/s/AKfycbzNDp58p3fbmi5CDWvEYEKU5HVM_vPMefes15e4NMan_4fvzI9yEAHJesOfeDEW_12N/exec';
+const TRACKER_ENDPOINT='https://script.google.com/macros/s/AKfycbwS-Jr8QSEUUwu8OqFgctLXhqDLR-cGu7CNIVcVcsFJNs9rfHRg7I9k-7LKL-M0E1VFnA/exec';
 async function handleSubmit(e){
   e.preventDefault();
   const form=document.getElementById('quote-form');
@@ -952,64 +954,38 @@ async function handleSubmit(e){
   submitBtn.disabled=true;
 
   try{
-    // Step 1: Upload each file and collect links
-    const fileLinks=[];
+    // Step 1: read files (they're saved straight into the customer's Drive folder by the CRM)
+    const files=[];
+    const skipped=[];
     if(uploadedFiles.length){
       submitBtn.textContent='Uploading files…';
       for(const file of uploadedFiles){
-        try{
-          const isImage=/\.(jpe?g|png|gif|webp)$/i.test(file.name);
-          if(isImage){
-            // Upload images to ImgBB
-            const reader=new FileReader();
-            const b64=await new Promise((res,rej)=>{
-              reader.onload=()=>res(reader.result.split(',')[1]);
-              reader.onerror=rej;
-              reader.readAsDataURL(file);
-            });
-            const fd=new FormData();
-            fd.append('key','2c52e0e36d5bdd6ab869e8610ff3e38d');
-            fd.append('image',b64);
-            fd.append('name',file.name);
-            const r=await fetch('https://api.imgbb.com/1/upload',{method:'POST',body:fd});
-            const j=await r.json();
-            if(j.success){
-              fileLinks.push(file.name+': '+j.data.url);
-            } else {
-              fileLinks.push(file.name+': (upload failed)');
-            }
-          } else {
-            // Upload PDFs to file.io
-            const fd=new FormData();
-            fd.append('file',file,file.name);
-            const r=await fetch('https://file.io/?expires=14d',{method:'POST',body:fd});
-            const j=await r.json();
-            if(j.success && j.link){
-              fileLinks.push(file.name+': '+j.link);
-            } else {
-              fileLinks.push(file.name+': (upload failed)');
-            }
-          }
-        } catch(fe){
-          fileLinks.push(file.name+': (upload error — please email file directly)');
-        }
+        if(file.size>10*1024*1024){skipped.push(file.name);continue;}
+        const b64=await new Promise((res,rej)=>{const rd=new FileReader();rd.onload=()=>res(String(rd.result).split(',')[1]);rd.onerror=rej;rd.readAsDataURL(file);});
+        files.push({name:file.name,type:file.type||'application/octet-stream',data:b64});
       }
     }
 
-    // Step 2: Build JSON payload from form fields
+    // Step 2: Build JSON payload from form fields (keep every checked add-on)
     submitBtn.textContent='Sending…';
     const raw=new FormData(form);
-    const payload={};
-    raw.forEach((v,k)=>{if(k!=='attachment')payload[k]=v;});
-    payload.attachments=fileLinks.length?fileLinks.join('\n'):'None';
+    const payload={type:'form',addons:[]};
+    raw.forEach((v,k)=>{if(k==='attachment')return;if(k==='addons')payload.addons.push(v);else payload[k]=v;});
+    if(skipped.length)payload.notes=(payload.notes||'')+'\n[Files over 10MB not uploaded: '+skipped.join(', ')+']';
+    payload.files=files;
 
-    // Step 3: POST to Google Apps Script as JSON (avoids CORS preflight issues with FormData)
-    const res=await fetch('https://script.google.com/macros/s/AKfycbwS-Jr8QSEUUwu8OqFgctLXhqDLR-cGu7CNIVcVcsFJNs9rfHRg7I9k-7LKL-M0E1VFnA/exec',{
-      method:'POST',
-      headers:{'Content-Type':'text/plain'},
-      body:JSON.stringify(payload)
-    });
-    const json=await res.json().catch(()=>({}));
+    // Step 3: POST to the Lastra CRM (text/plain avoids CORS preflight). Falls back to the old tracker script.
+    let json={};
+    try{
+      const res=await fetch(CRM_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)});
+      json=await res.json().catch(()=>({}));
+    }catch(e){json={};}
+    if(json.result!=='success'){
+      const fb=Object.assign({},payload,{addons:payload.addons.join(', '),attachments:files.length?files.map(f=>f.name+': (upload error — please email file directly)').join('\n'):'None'});
+      delete fb.files;delete fb.type;
+      const res2=await fetch(TRACKER_ENDPOINT,{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify(fb)});
+      json=await res2.json().catch(()=>({}));
+    }
     if(json.result==='success'){
       form.style.display='none';
       document.getElementById('form-success').style.display='block';
